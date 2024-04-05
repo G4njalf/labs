@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Pomodoro Ultra</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 2rem;
+            color: crimson;
+            background-color: rgba(220, 20, 60, 0.26);
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            border: 10px solid crimson;
+            transition: all 1s ease-in-out;
+        }
+
+        .button.clicked {
+            background-color: crimson;
+            color: antiquewhite;
+            scale: 1.2;
+            cursor: auto;
+        }
+
+        .button:hover {
+            background-color: crimson;
+            color: antiquewhite;
+            scale: 1.2;
+        }
+        .circle {
+            transition: all 1s ease-in-out;
+        }
+
+        .circle.active {
+            border: 25px solid crimson;
+            border-radius: 10%;
+            padding: 20rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="button" onclick="opencircle()">Start Studying</div>
+    </div>
+</body>
+<script>
+function opencircle() {
+    let circle = document.querySelector('.circle');
+    let button = document.querySelector('.button');
+    circle.classList.add('active');
+    button.classList.add('clicked');
+}
+    
+</script>
+
+</html>
